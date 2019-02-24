@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../Bot/.idea/Bot.iml" filepath="$PROJECT_DIR$/../../Bot/.idea/Bot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Pi-thon/.idea/Pi-thon.iml" filepath="$PROJECT_DIR$/../Pi-thon/.idea/Pi-thon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/styxbot.iml" filepath="$PROJECT_DIR$/.idea/styxbot.iml" />
+    </modules>
+  </component>
+</project>
