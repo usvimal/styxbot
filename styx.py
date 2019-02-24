@@ -1,7 +1,7 @@
 import telegram
 import os
 import logging
-from telegram.ext import Updater, CommandHandler
+from telegram.ext import Updater, CommandHandler, MessageHandler
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
 					level=logging.INFO)
@@ -24,7 +24,7 @@ def error(update, context):
 
 
 def main():
-	updater = Updater(token=TOKEN)
+	updater = Updater(token=TOKEN, use_context=True)
 	dispatcher = updater.dispatcher
 
 	dispatcher.add_handler(CommandHandler('start', start))
