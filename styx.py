@@ -1,7 +1,7 @@
 import telegram
 import os
 import logging
-from telegram.ext import Updater, CommandHandler, MessageHandler
+from telegram.ext import Updater, CommandHandler
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
 					level=logging.INFO)
@@ -14,17 +14,17 @@ bot = telegram.Bot(token=TOKEN)
 print(bot.get_me())
 
 
-def start(update, context):
+def start(bot, update):
 	update.message.reply_text("Hello there, General Kenobi")
 
 
-def error(update, context):
+def error(bot, update, error):
 	"""Log Errors caused by Updates."""
-	log.warning('Update "%s" caused error "%s"', update, context.error)
+	log.warning('Update "%s" caused error "%s"', update, error)
 
 
 def main():
-	updater = Updater(token=TOKEN, use_context=True)
+	updater = Updater(token=TOKEN)
 	dispatcher = updater.dispatcher
 
 	dispatcher.add_handler(CommandHandler('start', start))
