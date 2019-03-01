@@ -35,7 +35,7 @@ def main():
 	dispatcher = updater.dispatcher
 
 	dispatcher.add_handler(CommandHandler('start', start))
-
+	dispatcher.add_handler(CommandHandler('ping', ping))
 	# log all errors
 	dispatcher.add_error_handler(error)
 
