@@ -26,8 +26,10 @@ def error(bot, update, error):
 
 def ping(bot, update):
 	pingtime = time.time()
-	ping: float = time.time() - pingtime
-	update.message.reply_text(" time is `%.03f seconds` :ping_pong:" % ping)
+	pingg: float = time.time() - pingtime
+	print(pingg)
+	print(pingtime)
+	update.message.reply_text(" time is `%.03f seconds` 🏓" % pingg)
 
 
 def main():
