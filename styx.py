@@ -1,6 +1,7 @@
 import telegram
 import os
 import logging
+import time
 from telegram.ext import Updater, CommandHandler
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -21,6 +22,12 @@ def start(bot, update):
 def error(bot, update, error):
 	"""Log Errors caused by Updates."""
 	log.warning('Update "%s" caused error "%s"', update, error)
+
+
+def ping(bot, update):
+	pingtime = time.time()
+	ping: float = time.time() - pingtime
+	await update.message.reply_text(" time is `%.03f seconds` :ping_pong:" % ping)
 
 
 def main():
